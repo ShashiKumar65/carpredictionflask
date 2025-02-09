@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Prediction app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="main_body">
+        <h1>Car Price Prediction app</h1>
+        <form action="/predict" method="POST">
+            <label for="year" class="la">Enter Year :</label><br>
+            <input type="text" name="year" placeholder="Year" class="in"><br>
+            <label for="p_price" class="la">Enter Present Price :</label><br>
+            <input type="text" name="p_price" placeholder="Present Price" class="in"><br>
+            <label for="kms" class="la">Enter KMs driven :</label><br>
+            <input type="text" name="kms" placeholder="KMS driven" class="in"><br>
+
+            <label for="f_type" class="la">Fuel Type</label><br>
+            <select name="f_type" id="" class="in">
+                <option value="" disabled selected> Select Fuel Type</option>
+                {% for f in fuel %}
+                <option value="{{f}}">{{f}}</option>
+                {% endfor %}
+
+            </select><br>
+            <label for="s_type" class="la">Seller type</label><br>
+            <select name="s_type" id="" class="in">
+                <option value="" disabled selected> Select Seller Type</option>
+                {% for s in seller %}
+                <option value="{{s}}">{{s}}</option>
+                {% endfor %}
+
+            </select><br>
+            <label for="trans" class="la">Transmission Type</label><br>
+            <select name="trans" id="" class="in">
+                <option value="" disabled selected> Select Transmission Type</option>
+                {% for t in trans %}
+                <option value="{{t}}">{{t}}</option>
+                {% endfor %}
+
+            </select><br>
+            <label for="own" class="la">Enter Owner :</label><br>
+            <input type="text" name="own" placeholder="owner" class="in"><br>
+
+            <input type="submit" value="Predict" id="btn"><br>
+
+
+
+        </form>
+        <h1>{{prediction_text}}</h1>
+    </div>
+    
+</body>
+</html>

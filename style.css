@@ -1,0 +1,37 @@
+.main_body{
+    background-color: rgb(90, 225, 126);
+    text-align: center;
+    width:500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    color:darkmagenta;
+    background-color:darkcyan;
+    border-radius: 10px;
+}
+body{
+    background-color:cornflowerblue;
+}
+.la{
+    width:200px;
+    color:rgb(6, 6, 52);
+    font-size: 25px;
+}
+.in{
+    width:200px;
+    height:25px;
+    color: blueviolet;
+    outline: none;
+    border: none;
+    background-color:rgb(159, 187, 239);
+
+}
+#btn{
+    width:200px;
+    height:50px;
+    color: green;
+    background-color: cadetblue;
+    padding:10px;
+    margin-top: 20px;
+}
